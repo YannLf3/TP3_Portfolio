@@ -29,6 +29,7 @@
   --text-larger: var(--font-lgl);
   --text-title: var(--font-xl);
   --text-display: var(--font-2xl);
+  --text-display-large: var(--font-3xl);
 }
 
 @layer base {
@@ -54,6 +55,7 @@
     --fs-700: 2rem;
     --fs-750: 2.06rem;
     --fs-800: 2.5rem;
+    --fs-900: 4.5rem;
 
     /* Semantic Tokens */
     --clr-page-background: var(--clr-gray-900);
@@ -81,16 +83,37 @@
     --font-xl: var(--fs-700);
     --font-lgl: var(--fs-750);
     --font-2xl: var(--fs-800);
+    --font-3xl: var(--fs-900);
 
     --pattern-circle: url("./assets/pattern-circle.svg");
     --pattern-rings: url("./assets/pattern-rings.svg");
   }
 }
-
+  
 @utility circle {
-  @apply after:absolute after:top-36 after:right-65px after:block after:h-129px after:w-129px after:bg-(image:--pattern-circle) after:bg-no-repeat;
+  @apply after:absolute after:block after:h-32.25 after:w-129
+    after:bg-(image:--pattern-circle) after:bg-no-repeat
+    after:top-254 after:right-64;
+
+  @media (min-width: 768px) {
+    @apply after:top-353 after:right-0;
+  }
+
+  @media (min-width: 1024px) {
+    @apply after:top-521 after:right-0;
+  }
 }
 
 @utility rings {
-  @apply before:absolute before:top-20 before:left-470px before:block before:h-129px before:w-530px before:bg-(image:--pattern-rings) before:bg-no-repeat;
+  @apply before:absolute before:block before:h-129 before:w-530
+    before:bg-(image:--pattern-rings) before:bg-no-repeat
+    before:top-124 before:left-342;
+
+  @media (min-width: 768px) {
+    @apply before:top-86 before:left-265;
+  }
+
+  @media (min-width: 1024px) {
+    @apply before:top-133 before:left-100;
+  }
 }
