@@ -9,14 +9,16 @@
   <body
     class="bg-page-background text-text-primary font-main circle rings relative border-b font-bold"
   >
-    <nav class="flex items-center justify-between px-6">
+    <nav
+      class="flex flex-col items-center justify-self-center sm:flex-row sm:justify-between sm:justify-self-auto sm:px-6 lg:px-40"
+    >
       <p
         class="text-text-primary text-larger z-10 m-2.5 self-start justify-self-center sm:justify-self-start"
       >
         adamkeyes
       </p>
       <ul
-        class="z-10 mt-6 flex flex-row gap-6 self-start justify-self-center sm:justify-self-end"
+        class="z-10 mt-6 flex flex-row gap-6 self-center justify-self-center sm:self-start sm:justify-self-end"
       >
         <li>
           <a class="hover:text-action-hover cursor-pointer" href="#">
@@ -51,13 +53,16 @@
     <header
       class="relative mx-auto grid grid-cols-1 grid-rows-1 gap-8 p-4 text-center sm:p-8 sm:text-left lg:max-w-6xl lg:p-0"
     >
-      <picture class="z-0 sm:col-start-1 sm:row-start-1 sm:justify-self-end">
+      <picture
+        class="z-0 -mt-27 -mr-9 justify-self-center sm:col-start-1 sm:row-start-1 sm:items-start sm:justify-self-end md:max-w-lg lg:-mr-5"
+      >
         <source
-          media="(min-width: 768px)"
+          class=""
+          media="(width>= 640px)"
           srcset="./src/assets/image-profile-tablet.webp"
         />
         <source
-          media="(min-width: 1200px)"
+          media="(width>= 1200px)"
           srcset="./src/assets/image-profile-desktop.webp"
         />
         <img
@@ -68,13 +73,13 @@
       </picture>
 
       <div
-        class="flex flex-col justify-center sm:z-10 sm:col-start-1 sm:row-start-1 sm:max-w-md"
+        class="flex flex-col justify-center sm:z-10 sm:col-start-1 sm:row-start-1 sm:max-w-md lg:ml-10 lg:max-w-3xl"
       >
-        <h1 class="text-title">
+        <h1 class="text-title md:text-display lg:text-display-large">
           Nice to meet you! <br />I'm
           <span class="decoration-accent underline underline-offset-10"
             >Adam Keyes</span
-          >
+          >.
         </h1>
         <p class="mt-6 mb-8 font-normal">
           Based in the UK, I'm a front-end developer passionate about building
@@ -126,7 +131,7 @@
         </div>
       </div>
     </section>
-    <section class="mx-auto max-w-1110 px-4 py-16 md:px-8 md:py-20 lg:px-0">
+    <section class="mx-auto px-4 py-16 md:px-8 md:py-20 lg:px-10">
       <div class="mb-10 flex items-center justify-between">
         <h2 class="text-display md:text-display-large">Projects</h2>
 
@@ -138,170 +143,320 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-1-large.webp"
-            alt="Design portfolio project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">Design portfolio</h3>
-          <p class="text-text-secondary mt-2 font-normal">HTML CSS</p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+      <ul class="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-1-large.webp" />
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-1-small.webp"
+                alt="Design portfolio project"
+            /></picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">Design portfolio</h3>
+            <p class="text-text-secondary mt-2 font-normal">HTML CSS</p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
 
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-2-large.webp"
-            alt="E-learning landing page project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">
-            E-learning landing page
-          </h3>
-          <p class="text-text-secondary mt-2 font-normal">HTML CSS</p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-2-large.webp"
+              />
 
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-3-large.webp"
-            alt="Todo web application project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">Todo web application</h3>
-          <p class="text-text-secondary mt-2 font-normal">
-            HTML CSS Javascript
-          </p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-2-small.webp"
+                alt="E-learning landing page project"
+              />
+            </picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">
+              E-learning landing page
+            </h3>
+            <p class="text-text-secondary mt-2 font-normal">HTML CSS</p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-3-large.webp"
+              />
 
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-4-large.webp"
-            alt="Entertainment web application project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">
-            Entertainment web application
-          </h3>
-          <p class="text-text-secondary mt-2 font-normal">
-            HTML CSS Javascript
-          </p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-3-small.webp"
+                alt="Todo web application project"
+              />
+            </picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">Todo web application</h3>
+            <p class="text-text-secondary mt-2 font-normal">
+              HTML CSS Javascript
+            </p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-4-large.webp"
+              />
 
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-5-large.webp"
-            alt="Memory game project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">Memory game</h3>
-          <p class="text-text-secondary mt-2 font-normal">
-            HTML CSS Javascript
-          </p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-4-small.webp"
+                alt="Entertainment web application project"
+              />
+            </picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">
+              Entertainment web application
+            </h3>
+            <p class="text-text-secondary mt-2 font-normal">
+              HTML CSS Javascript
+            </p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-5-large.webp"
+              />
 
-        <article>
-          <img
-            class="aspect-16/10 w-full object-cover"
-            src="./src/assets/thumbnail-project-6-large.webp"
-            alt="Art gallery showcase project"
-          />
-          <h3 class="mt-5 text-(--fs-600) uppercase">Art gallery showcase</h3>
-          <p class="text-text-secondary mt-2 font-normal">
-            HTML CSS Javascript
-          </p>
-          <div class="mt-4 flex gap-5 lg:hidden">
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Project
-            </a>
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-5-small.webp"
+                alt="Memory game project"
+              />
+            </picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">Memory game</h3>
+            <p class="text-text-secondary mt-2 font-normal">
+              HTML CSS Javascript
+            </p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
 
-            <a
-              class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
-              href="#"
-            >
-              View Code
-            </a>
-          </div>
-        </article>
-      </div>
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <picture class="aspect-16/10 w-full object-cover">
+              <source
+                media="(width>= 640px)"
+                srcset="./src/assets/thumbnail-project-6-large.webp"
+              />
+
+              <img
+                class="aspect-16/10 w-full object-cover"
+                src="./src/assets/thumbnail-project-6-small.webp"
+                alt="Art gallery showcase project"
+              />
+            </picture>
+            <h3 class="mt-5 text-(--fs-600) uppercase">Art gallery showcase</h3>
+            <p class="text-text-secondary mt-2 font-normal">
+              HTML CSS Javascript
+            </p>
+            <div class="mt-4 flex gap-5 lg:hidden">
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Project
+              </a>
+
+              <a
+                class="text-accent decoration-accent hover:text-action-hover uppercase underline underline-offset-4"
+                href="#"
+              >
+                View Code
+              </a>
+            </div>
+          </article>
+        </li>
+      </ul>
     </section>
+    <footer
+      id="contact"
+      class="rings relative  border-t border-text-primary/50 bg-section-background px-4 py-16 md:px-8 md:py-20 lg:px-10"
+    >
+      <div
+        class="relative z-10 mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-12 lg:gap-24"
+      >
+        <div>
+          <h2 class="text-display md:text-display-large">Contact</h2>
+          <p class="text-text-secondary mt-6 max-w-xl text-middle font-normal">
+            I would love to hear about your project and how I could help.
+            Please fill in the form, and I’ll get back to you as soon as
+            possible.
+          </p>
+        </div>
+
+        <form class="grid gap-8" action="#">
+          <label class="text-text-muted grid gap-3 uppercase">
+            <span>Name</span>
+            <input
+              class="border-text-muted border-b bg-transparent px-0 pb-4 font-normal outline-none focus:border-accent"
+              type="text"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <label class="text-text-muted grid gap-3 uppercase">
+            <span>Email</span>
+            <input
+              class="border-text-muted border-b bg-transparent px-0 pb-4 font-normal outline-none focus:border-accent"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </label>
+
+          <label class="text-text-muted grid gap-3 uppercase">
+            <span>Message</span>
+            <textarea
+              class="border-text-muted min-h-32 border-b bg-transparent px-0 pb-4 font-normal outline-none focus:border-accent"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </label>
+
+          <button
+            class="text-accent decoration-accent hover:text-action-hover self-end uppercase underline underline-offset-13"
+            type="submit"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+
+      <div
+        class="relative z-10 mx-auto mt-16 grid grid-cols-2 items-center gap-8 border-t border-text-primary/50 pt-8 md:mt-20"
+      >
+        <p class="text-text-primary text-larger">adamkeyes</p>
+        <ul class="flex justify-self-end gap-6" aria-label="Social links">
+          <li>
+            <a
+              class="hover:text-action-hover block"
+              href="#"
+              aria-label="GitHub"
+            >
+              <svg class="h-6 w-6"><use href="#github"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-action-hover block"
+              href="#"
+              aria-label="Frontend Mentor"
+            >
+              <svg class="h-6 w-6"><use href="#frontend-mentor"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-action-hover block"
+              href="#"
+              aria-label="LinkedIn"
+            >
+              <svg class="h-6 w-6"><use href="#linkedin"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-action-hover block"
+              href="#"
+              aria-label="Twitter"
+            >
+              <svg class="h-6 w-6"><use href="#twitter"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
 

@@ -34,6 +34,12 @@
 
 @layer base {
   :root {
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
     /* Primitive Tokens */
     --clr-white: oklch(1 0 0);
 
@@ -89,31 +95,27 @@
     --pattern-rings: url("./assets/pattern-rings.svg");
   }
 }
-  
+
 @utility circle {
-  @apply after:absolute after:block after:h-32.25 after:w-129
-    after:bg-(image:--pattern-circle) after:bg-no-repeat
-    after:top-254 after:right-64;
+  @apply after:absolute after:top-254 after:right-64 after:block after:h-32.25 after:w-129 after:bg-(image:--pattern-circle) after:bg-no-repeat;
 
   @media (min-width: 768px) {
-    @apply after:top-353 after:right-0;
+    @apply after:top-200 after:left-200;
   }
 
   @media (min-width: 1024px) {
-    @apply after:top-521 after:right-0;
+    @apply after:top-180 after:left-180;
   }
 }
 
 @utility rings {
-  @apply before:absolute before:block before:h-129 before:w-530
-    before:bg-(image:--pattern-rings) before:bg-no-repeat
-    before:top-124 before:left-342;
+  @apply before:absolute before:top-124 before:left-342 before:block before:h-129 before:w-530 before:bg-(image:--pattern-rings) before:bg-no-repeat;
 
   @media (min-width: 768px) {
-    @apply before:top-86 before:left-265;
+    @apply before:top-80 before:-left-60;
   }
 
   @media (min-width: 1024px) {
-    @apply before:top-133 before:left-100;
+    @apply before:top-70 before:-left-55;
   }
 }
